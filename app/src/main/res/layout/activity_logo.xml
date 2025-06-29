@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/logoScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo_background_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Logo Circle with Transparent Background -->
+
+        <!-- SkillRoute Text -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+
+            android:contentDescription="Logo Icon"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_no_bg"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SkillRoute"
+
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="3dp" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your journey to skills starts here"
+            android:textSize="16sp"
+            android:textColor="#444444" />
+    </LinearLayout>
+
+</RelativeLayout>
