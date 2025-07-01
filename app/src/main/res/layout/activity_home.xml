@@ -1,62 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo_background_gradient">
+    android:background="@drawable/your_custom_gradient">
 
-    <!-- Top Toolbar -->
-    <include layout="@layout/toolbar_skillrout" />
-
-    <!-- Main Scrollable Content -->
+    <!-- Main content inside ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="@drawable/your_custom_gradient">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/home_content"
+
+            android:padding="16dp">
+
+            <!-- Menu Icon -->
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_menu"
+                android:background="@drawable/rounded_white_bg"
+                android:padding="8dp"
+                android:elevation="4dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:text="Start your learning journey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#4B0082" />
+
+            <!-- Filter Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your designs"
+                    android:background="@drawable/rounded_white_bg"
+                    android:textColor="#000" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Templates"
+                    android:background="@drawable/rounded_white_bg"
+                    android:textColor="#000" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="AI"
+                    android:background="@drawable/rounded_white_purple_glow"
+                    android:textColor="#4B0082" />
+            </LinearLayout>
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:hint="Describe your idea"
+                android:drawableEnd="@drawable/ic_arrow"
+                android:drawablePadding="12dp"
+                android:padding="16dp"
+                android:background="@drawable/search_bar_glow"
+                android:textColorHint="#888888"
+                android:textColor="#000000" />
 
             <!-- Motivational Line -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Empower your future by learning one skill at a time"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#555555"
-                android:layout_marginTop="60dp"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="1dp"
-                android:paddingBottom="12dp" />
-
-            <!-- Search Bar -->
-            <EditText
-                android:id="@+id/searchBar"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="Search skills..."
-                android:drawableStart="@android:drawable/ic_menu_search"
-                android:drawablePadding="8dp"
-                android:background="@drawable/search_bar_bg"
-                android:padding="12dp"
-                android:textColor="#000000" />
-
-            <!-- Repeated Motivational Line -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Empower your future by learning one skill at a time"
                 android:textSize="14sp"
                 android:textColor="#555555"
-                android:paddingTop="12dp"
+                android:paddingTop="24dp"
                 android:paddingBottom="12dp" />
 
-            <!-- Tip Box -->
+            <!-- Tip Card -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,16 +110,14 @@
                 android:background="@drawable/tip_card_bg"
                 android:textSize="14sp" />
 
-            <!-- Continue Learning Card -->
+            <!-- Continue Learning -->
             <LinearLayout
-                android:id="@+id/continueLearningCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@drawable/continue_card_bg"
                 android:padding="12dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginBottom="8dp"
                 android:gravity="center_vertical">
 
                 <ImageView
@@ -87,24 +129,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Continue learning: Python"
+                    android:layout_marginStart="8dp"
                     android:textSize="16sp"
-                    android:textColor="#000000"
-                    android:layout_marginStart="8dp" />
+                    android:textColor="#000000" />
             </LinearLayout>
 
-            <!-- Category Cards -->
+            <!-- Skill Cards -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layoutAnimation="@anim/layout_fall_down">
+                android:layoutAnimation="@anim/layout_fall_down"
+                android:layout_marginTop="16dp">
 
                 <include layout="@layout/card_category_development" />
                 <include layout="@layout/card_category_programing" />
                 <include layout="@layout/card_category_tech_domain" />
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/drawer_header" />
+</androidx.drawerlayout.widget.DrawerLayout>
