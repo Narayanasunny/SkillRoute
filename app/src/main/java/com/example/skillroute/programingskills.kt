@@ -1,8 +1,13 @@
 package com.example.skillroute
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.GridLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -11,6 +16,19 @@ class programingskills : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_programingskills)
+
+        //this for animation for every card view
+        val gridLayout = findViewById<GridLayout>(R.id.gridLayout)
+        gridLayout.layoutAnimation = AnimationUtils.loadLayoutAnimation(this, R.anim.layout_fall_down)
+        gridLayout.scheduleLayoutAnimation()
+
+        //this is for cardview to open another page
+        val javaCard = findViewById<CardView>(R.id.cardJava)
+        javaCard.setOnClickListener {
+
+            startActivity(Intent(this, dashboard::class.java))
+            // startActivity(Intent(this, JavaDetailActivity::class.java))
+        }
 
     }
 }

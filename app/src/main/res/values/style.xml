@@ -25,5 +25,21 @@
         <item name="android:layout_marginTop">8dp</item>
     </style>
 
+    <style name="TagStyle">
+        <item name="android:background">@android:color/holo_blue_dark</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ListItem">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+
+
 
 </resources>

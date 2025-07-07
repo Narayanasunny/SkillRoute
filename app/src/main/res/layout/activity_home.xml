@@ -28,6 +28,7 @@
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/ic_menu"
+                app:itemTextColor="@color/nav_item_color"
                 android:background="@drawable/rounded_white_bg"
                 android:padding="8dp"
                 android:elevation="4dp" />
@@ -40,11 +41,22 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="24dp"
                 android:text="Start your learning journey"
-                android:textSize="22sp"
+                android:textSize="26sp"
+                android:fontFamily="@font/poppins_bold"
                 android:textStyle="bold"
-                android:textColor="#4B0082" />
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="2dp"
+                android:gravity="center"
+                android:shadowColor="#55000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
+                android:textColor="#FF000000"/>  <!-- temporary, gradient will override -->
 
-            <!-- Filter Buttons -->
+
+
+
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,28 +65,38 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/your_button_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Your designs"
-                    android:background="@drawable/rounded_white_bg"
-                    android:textColor="#000" />
+                    android:background="@drawable/gradient_button_default"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:elevation="6dp"
+                    android:layout_marginEnd="8dp" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="Templates"
-                    android:background="@drawable/rounded_white_bg"
-                    android:textColor="#000" />
+                    android:text="Skill Quiz"
+                    android:background="@drawable/gradient_button_default"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:elevation="6dp"
+                    android:layout_marginEnd="8dp" />
 
                 <Button
+                    android:id="@+id/btnAI"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:background="@drawable/glow_background"
+                    android:elevation="6dp"
                     android:text="AI"
-                    android:background="@drawable/rounded_white_purple_glow"
-                    android:textColor="#4B0082" />
+                    android:textColor="#FFFFFF" />
+
+
             </LinearLayout>
+
 
             <!-- Search Bar -->
             <EditText
@@ -82,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="20dp"
-                android:hint="Describe your idea"
+                android:hint="Search for a skill..."
                 android:drawableEnd="@drawable/ic_arrow"
                 android:drawablePadding="12dp"
                 android:padding="16dp"
@@ -145,6 +167,9 @@
                 <include layout="@layout/card_category_development" />
                 <include layout="@layout/card_category_programing" />
                 <include layout="@layout/card_category_tech_domain" />
+                <include layout="@layout/card_category_communication_skills" />
+                <include layout="@layout/card_category_apptitude" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

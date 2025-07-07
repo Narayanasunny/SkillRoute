@@ -1,5 +1,6 @@
 package com.example.skillroute
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.GridLayout
@@ -23,8 +24,8 @@ class devp_skill : AppCompatActivity() {
 
         val javaCard = findViewById<CardView>(R.id.cardJava)
         javaCard.setOnClickListener {
-            Toast.makeText(this, "Java clicked!", Toast.LENGTH_SHORT).show()
-            // startActivity(Intent(this, JavaDetailActivity::class.java))
+
+            startActivity(Intent(this, dashboard::class.java))
         }
 
 

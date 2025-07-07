@@ -68,4 +68,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //for feedbackpage
+    implementation ("nl.dionsegijn:konfetti-xml:2.0.2")
+    implementation ("com.airbnb.android:lottie:6.1.0")
+
+    implementation ("com.google.android.material:material:1.11.0")
+
+
+
 }

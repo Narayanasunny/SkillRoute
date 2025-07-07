@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedbackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F7FAFF">
+
+    <!-- SkillRoute Logo -->
+    <TextView
+        android:text="SkillRoute"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1A2C65"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Experience Text -->
+    <TextView
+        android:id="@+id/text_experience"
+        android:text="How is your experience?"
+        android:textSize="20sp"
+        android:textColor="#1A2C65"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Emoji Rating Bar -->
+    <LinearLayout
+        android:id="@+id/emojiLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView android:id="@+id/emoji1" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/emoji_very_bad" android:padding="4dp"/>
+        <ImageView android:id="@+id/emoji2" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/emoji_bad" android:padding="4dp"/>
+        <ImageView android:id="@+id/emoji3" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/emoji_neutral" android:padding="4dp"/>
+        <ImageView android:id="@+id/emoji4" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/emoji_good" android:padding="4dp"/>
+        <ImageView android:id="@+id/emoji5" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/emoji_very_good" android:padding="4dp"/>
+    </LinearLayout>
+
+
+    <!-- Reaction Text -->
+    <TextView
+        android:id="@+id/reactionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="#1A2C65"
+        android:layout_marginBottom="16dp"/>
+
+
+    <!-- Optional Text -->
+    <TextView
+        android:text="Optional"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Comments Box -->
+    <EditText
+        android:id="@+id/commentsBox"
+        android:hint="Additional comments"
+        android:minHeight="100dp"
+        android:background="@drawable/rounded_box"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#999999"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submitBtn"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

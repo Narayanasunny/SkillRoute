@@ -6,13 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class tech_domain_skill : AppCompatActivity() {
+class apptitude_skills : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tech_domain_skill)
-
-
+        setContentView(R.layout.activity_apptitude_skills)
 
     }
 }
